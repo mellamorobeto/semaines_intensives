@@ -21,21 +21,17 @@ $company->setNom($_POST['name']);
 $company->setCara($_POST['cara']);
 $company->setDescription($_POST['desc']);
 $company->setPlanete($_POST['planete']);
-$company->setLogo($_POST['logo']);
-
-
-
-
+$company->setLogo($_FILES['logo']['name']);
 
 $imageChemin = $_FILES['logo']['tmp_name'];
 $imageRepertoire = 'imgs/'.$_FILES['logo']['name'];
 $moveIsOk = move_uploaded_file($imageChemin, $imageRepertoire);
+
 if ($moveIsOk){
-    $messageImg = "le fichier est bon".$imageRepertoire;
+    $messageImg = "le fichier".$imageRepertoire ."est uploader";
 }else{
     $messageImg = "le fichier a une erreur ";
 }
-
 
 
 

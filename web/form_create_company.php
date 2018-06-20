@@ -28,7 +28,7 @@
 
 <p><a href="summary.html">Retour au sommaire</a></p>
 
-<form action="createCompany.php" method="post">
+<form action="createCompany.php" method="post" enctype="multipart/form-data">
 
     <p>
         <label for="name">Nom</label>

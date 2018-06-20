@@ -46,15 +46,15 @@ $companies = $companyManager->readAll();
 <ul>
 
     <?php foreach ($companies as $company): ?>
-    <li><?= $company->getNom() ?> <?= $company->getCara() ?> <?= $company->getDescription() ?> <?= $company->getPlanete() ?> -
-          - <img style="width: 80px" src='imgs/'.<?= $company->getLogo() ?>'' alt=""><?= $company->getLogo() ?>
+    <li><?= $company->getNom() ?> <?= $company->getCara() ?> <?= $company->getDescription() ?><?= $company->getLogo() ?> <?= $company->getPlanete() ?> -
+          - <?php echo '<img style="width:40px"; src="imgs/'.$company->getLogo().'" alt="" />'; ?>
         <a href="form_update_company.php?id=<?= $company->getId() ?>">Modifier</a> - <a href="delete_company.php?id=<?= $company->getId() ?>">Supprimer</a></li>
 
     <?php endforeach;?>
 </ul>
 
         <a href="summary.html">Retour au sommaire</a>
-
+       
   <?php endif; ?>
 <?php endif; ?>
 </body>
