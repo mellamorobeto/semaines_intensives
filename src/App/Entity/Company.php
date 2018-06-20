@@ -22,6 +22,8 @@ class Company
 
     private $planete;
 
+    private $logo;
+
     /**
      * @return string
      */
@@ -85,6 +87,24 @@ class Company
     {
         $this->planete = $planete;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getLogo()
+    {
+        return $this->logo;
+    }
+
+    /**
+     * @param mixed $logo
+     */
+    public function setLogo($logo)
+    {
+        $this->logo = $logo;
+    }
+
+
 
     /**
      * @return int

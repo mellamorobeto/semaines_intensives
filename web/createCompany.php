@@ -8,9 +8,11 @@
 
 require_once '../src/App/Manager/CompanyManager.php';
 require_once '../src/App/Entity/Company.php';
+require 'form_create_company.php';
 
 use App\Entity\Company;
 use App\Manager\CompanyManager;
+
 
 
 $company = new Company();
@@ -19,6 +21,23 @@ $company->setNom($_POST['name']);
 $company->setCara($_POST['cara']);
 $company->setDescription($_POST['desc']);
 $company->setPlanete($_POST['planete']);
+$company->setLogo($_POST['logo']);
+
+
+
+
+
+$imageChemin = $_FILES['logo']['tmp_name'];
+$imageRepertoire = 'imgs/'.$_FILES['logo']['name'];
+$moveIsOk = move_uploaded_file($imageChemin, $imageRepertoire);
+if ($moveIsOk){
+    $messageImg = "le fichier est bon".$imageRepertoire;
+}else{
+    $messageImg = "le fichier a une erreur ";
+}
+
+
+
 
 $companyManager = new CompanyManager();
 
@@ -45,6 +64,8 @@ if ($saveIsOk){
 <h1>Insertion d'une entreprise</h1>
 
 <p><?= $messsage?></p>
+<p><?= $messageImg?></p>
+
 <a href="summary.html">Retour</a>
 </body>
 </html>

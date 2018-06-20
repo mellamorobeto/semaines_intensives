@@ -37,7 +37,7 @@ class CompanyManager
 
     public function __construct()
     {
-        $this->pdo = new PDO('mysql:host=localhost;dbname=space','root','root');
+        $this->pdo = new PDO('mysql:host=localhost;dbname=space','root','hotSauce999');
     }
 
 
@@ -48,12 +48,13 @@ class CompanyManager
      */
     private function create(Company &$company)
     {
-        $this->pdoStatement = $this->pdo->prepare('INSERT INTO company VALUES (NULL, :nom, :cara, :description, :planete)');
+        $this->pdoStatement = $this->pdo->prepare('INSERT INTO company VALUES (NULL, :nom, :cara, :description, :planete, :logo)');
 
         $this->pdoStatement->bindValue(':nom', $company->getNom(), PDO::PARAM_STR);
         $this->pdoStatement->bindValue(':cara', $company->getCara(), PDO::PARAM_STR);
         $this->pdoStatement->bindValue(':description', $company->getDescription(), PDO::PARAM_STR);
         $this->pdoStatement->bindValue(':planete', $company->getPlanete(), PDO::PARAM_STR);
+        $this->pdoStatement->bindValue(':logo', $company->getLogo(), PDO::PARAM_STR);
 
        $executeIsOk = $this->pdoStatement->execute();
 
@@ -65,6 +66,8 @@ class CompanyManager
 
            return true;
        }
+
+
     }
 
     /**
@@ -133,13 +136,15 @@ class CompanyManager
     private function update(Company $company)
     {
 
-        $this->pdoStatement = $this->pdo->prepare('UPDATE company set nom=:nom, cara=:cara, description=:description, planete=:planete WHERE id=:id LIMIT 1');
+        $this->pdoStatement = $this->pdo->prepare('UPDATE company set nom=:nom, cara=:cara, description=:description, planete=:planete, logo=:logo WHERE id=:id LIMIT 1');
 
         $this->pdoStatement->bindValue(':nom', $company->getNom(), PDO::PARAM_STR);
         $this->pdoStatement->bindValue(':cara', $company->getCara(), PDO::PARAM_STR);
         $this->pdoStatement->bindValue(':description', $company->getDescription(), PDO::PARAM_STR);
         $this->pdoStatement->bindValue(':planete', $company->getPlanete(), PDO::PARAM_STR);
+        $this->pdoStatement->bindValue(':logo', $company->getLogo(), PDO::PARAM_STR);
         $this->pdoStatement->bindValue(':id', $company->getId(), PDO::PARAM_INT);
+
 
        return $this->pdoStatement->execute();
     }

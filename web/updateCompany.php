@@ -21,6 +21,7 @@ $company->setNom($_POST['name']);
 $company->setCara($_POST['cara']);
 $company->setDescription($_POST['desc']);
 $company->setPlanete($_POST['planete']);
+$company->setLogo($_POST['logo']);
 
 $saveIsOk = $companyManager->save($company);
 

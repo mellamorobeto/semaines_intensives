@@ -47,6 +47,7 @@ $companies = $companyManager->readAll();
 
     <?php foreach ($companies as $company): ?>
     <li><?= $company->getNom() ?> <?= $company->getCara() ?> <?= $company->getDescription() ?> <?= $company->getPlanete() ?> -
+          - <img style="width: 80px" src='imgs/'.<?= $company->getLogo() ?>'' alt=""><?= $company->getLogo() ?>
         <a href="form_update_company.php?id=<?= $company->getId() ?>">Modifier</a> - <a href="delete_company.php?id=<?= $company->getId() ?>">Supprimer</a></li>
 
     <?php endforeach;?>

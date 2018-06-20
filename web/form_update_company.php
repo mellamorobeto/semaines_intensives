@@ -39,8 +39,15 @@ $company = $companyManager->read($_GET['id'])
     </p>
 
     <p>
+        <label for="logo">Logo</label>
+        <input name="logo" id="logo" type="file" value="<?= $company->getLogo() ?>">
+    </p>
+
+    <p>
         <input type="hidden" name="id" value="<?= $company->getId() ?>">
         <input value="Modifier l'entreprise" type="submit">
     </p>
+
+
 
 </form>

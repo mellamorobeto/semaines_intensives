@@ -6,8 +6,21 @@
  * Time: 01:01
  */
 
-?>
 
+
+?>
+<style>
+    .custom-select {
+        border: none;
+        outline: none;
+        border-radius: 0;
+        margin: 0;
+        display: block;
+        font-size: 14px;
+        color: black;
+        height: 25px;
+    }
+</style>
 <html>
 <body>
 
@@ -22,10 +35,13 @@
         <input title="name" name="name" id="prenom" type="text">
     </p>
 
-    <p>
-        <label for="nom">Type</label>
-        <input title="type" name="cara" id="prenom" type="text">
-    </p>
+    <select class="custom-select"  title="cara" name="cara">
+        <option value="1">Selectionner le type d'entreprise</option>
+        <option value="Pme">Pme</option>
+        <option value="pma">pma</option>
+        <option value="pmi">pmi</option>
+        <option value="pololo">pololo</option>
+    </select>
 
     <p>
         <label for="tel">Description</label>
@@ -38,8 +54,13 @@
     </p>
 
     <p>
+        <label for="logo">Logo</label>
+        <input name="logo" id="logo" type="file">
+    </p>
 
-        <input value="Ajouter l'entreprise" type="submit">
+    <p>
+
+        <input name="upload" value="Ajouter l'entreprise" type="submit">
     </p>
 </form>
 
