@@ -37,7 +37,7 @@ class CompanyManager
 
     public function __construct()
     {
-        $this->pdo = new PDO('mysql:host=localhost;dbname=space','root','hotSauce999');
+        $this->pdo = new PDO('mysql:host=localhost;dbname=space','root','root');
     }
 
 
