@@ -48,6 +48,4 @@ $company = $companyManager->read($_GET['id'])
         <input value="Modifier l'entreprise" type="submit">
     </p>
 
-
-
 </form>
