@@ -20,6 +20,10 @@
                 <td>{{ website.industrie }}</td>
             </tr>
             <tr>
+                <th>Industrie</th>
+                <td>{{ website.createdAt ? website.createdAt|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
                 <th>Entreprise associé</th>
                 <td>{{ website.company.type }}</td>
             </tr>

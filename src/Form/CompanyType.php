@@ -9,6 +9,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class CompanyType extends AbstractType
@@ -19,87 +20,103 @@ class CompanyType extends AbstractType
             ->add('name')
             ->add('type',ChoiceType::class, array(
                 'choices'  => array(
-                    'Grande entrepries(GE)' => true,
-                    'Taille intémédiaire(ETI)' => true,
-                    'Petite et Moyenne(PME)' => true,
-                    'Micro Entreprise(TPE)' => true,
+                    'Grande entrepries(GE)' => 'GE',
+                    'Taille intémédiaire(ETI)' =>'ETI',
+                    'Petite et Moyenne(PME)' => 'PME',
+                    'Micro Entreprise(TPE)' => 'TPE',
                 ),
             ))
-            ->add('createdAt')
+            ->add('industries',ChoiceType::class, array(
+                'choices'  => array(
+                    'Pétrolière' => 'Pétrolière',
+                    'Sidérurgie' =>'Sidérurgie',
+                    'Textile' => 'Textile',
+                    'Agro-Alimentaire' => 'Agro-Alimentaire',
+                    'Pharmaceutique' =>'Pharmaceutique',
+                    'Recyclage' => 'Recyclage',
+                ),
+            ))
+            ->add('createdAt', DateTimeType::class, array(
+                'placeholder' => array(
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                ),
+            ))
             ->add('nameCompany')
-            ->add('logo', FileType::class, array('label' => 'inserer une image'))
+            ->add('logo', FileType::class, array(
+                'label' => 'Votre Logo : ',
+                ))
             ->add('tel')
             ->add('mail')
             ->add('description')
-            ->add('planete',ChoiceType::class, array(
+            ->add('planete', ChoiceType::class, array(
                 'choices'  => array(
-                    'Nidavellir' => true,
-                    'Kamino' => true,
-                    'Alpha' => true,
-                    'Sakar' => true,
-                    'Xandar' => true,
-                    'Mustafar' => true,
+                    'Nidavellir' => 'Nidavellir',
+                    'Kamino' => 'Kamino' ,
+                    'Alpha' => 'Alpha',
+                    'Sakar' => 'Sakar',
+                    'Xandar' => 'Xandar',
+                    'Mustafar' => 'Mustafar',
                 ),
             ))
             ->add('products',ChoiceType::class, array(
                 'choices' => array(
                     'Nivadellir' => array(
-                        'Produit 1' => 'stock_yes',
-                        'Produit 2' => 'stock_no',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Kamino' => array(
-                        'Produit 1' => 'stock_backordered',
-                        'Produit 2' => 'stock_discontinued',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Alpha' => array(
-                        'Produit 1' => 'stock_yes',
-                        'Produit 2' => 'stock_no',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Sakaar' => array(
-                        'Produit 1' => 'stock_backordered',
-                        'Produit 2' => 'stock_discontinued',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Xandar' => array(
-                        'Produit 1' => 'stock_yes',
-                        'Produit 2' => 'stock_no',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Mustafar' => array(
-                        'Produit 1' => 'stock_backordered',
-                        'Produit 2' => 'stock_discontinued',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                 ),
             ))
             ->add('materials',ChoiceType::class, array(
                 'choices' => array(
                     'Nivadellir' => array(
-                        'Matériaux 1' => 'stock_yes',
-                        'Matériaux 2' => 'stock_no',
+                        'Matériaux 1' => 'Matériaux 1',
+                        'Matériaux 2' => 'Matériaux 2',
                     ),
                     'Kamino' => array(
-                        'Matériaux 1' => 'stock_backordered',
-                        'Matériaux 2' => 'stock_discontinued',
+                        'Matériaux 1' => 'Matériaux 1',
+                        'Matériaux 2' => 'Matériaux 2',
                     ),
                     'Alpha' => array(
-                        'Matériaux 1' => 'stock_yes',
-                        'Matériaux 2' => 'stock_no',
+                        'Matériaux 1' => 'Matériaux 1',
+                        'Matériaux 2' => 'Matériaux 2',
                     ),
                     'Sakaar' => array(
-                        'Matériaux 1' => 'stock_backordered',
-                        'Matériaux 2' => 'stock_discontinued',
+                        'Matériaux 1' => 'Matériaux 1',
+                        'Matériaux 2' => 'Matériaux 2',
                     ),
                     'Xandar' => array(
-                        'Matériaux 1' => 'stock_yes',
-                        'Matériaux 2' => 'stock_no',
+                        'Matériaux 1' => 'Matériaux 1',
+                        'Matériaux 2' => 'Matériaux 2',
                     ),
                     'Mustafar' => array(
-                        'Matériaux 1' => 'stock_backordered',
-                        'Matériaux 2' => 'stock_discontinued',
+                        'Matériaux 1' => 'Matériaux 1',
+                        'Matériaux 2' => 'Matériaux 2',
                     ),
                 ),
             ))
@@ -108,9 +125,10 @@ class CompanyType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults([
+        $resolver->setDefaults(array(
             'data_class' => Company::class,
-        ]);
+            'numOfHoles' => 0,
+        ));
     }
 
 

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}OPU!{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/desktop.css') }}">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/mobile.css') }}">
+        <link rel="stylesheet" href="styles/font.css">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_mobile.css') }}">
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_desktop.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/flexboxgrid.min.css') }}" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+    <div>
+    <div class="bg_menu">
+    <div class="close">
+      <img src="{{ asset('bundles/easyadmin/img/cancel.svg') }}" alt="fermer" style="width: 5vw;padding: 2vw 2vw 2vw 2vw;">
+    </div>
+    <nav>
+      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Présentation du concept</a></li>
+      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Simulateur</a></li>
+      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Les planètes</a></li>
+      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Les entreprises</a></li>
+      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Se délocaliser</a></li>
+      <li><img src="{{ asset('bundles/easyadmin/img/search%20icon.png') }}" alt="search_logo" class="header_search"></li>
+  </div>
+
+  <div class="deco"></div>
+  <div class="deco2"></div>
+  <div class="deco3"></div>
+
+  <header>
+    <div class="header_connection">
+      <a href="#">Se connecter</a>
+      <a href="#">FR</a><a href="#">|</a><a href="#">EN</a>
+    </div>
+    <div class="header_topBar">
+      <div class="thebg">
+        <img src="{{ asset('bundles/easyadmin/img/final%20logo@2x.png') }}" alt="OPU logo" class="header_logo">
+      </div>
+      <nav class="theNav">
+        <li><a href="#">Présentation du concept</a></li>
+        <li><a href="#">Simulateur</a></li>
+        <li><a href="#">Les planètes</a></li>
+        <li><a href="#">Les entreprises</a></li>
+        <li><a href="#">Se délocaliser</a></li>
+        <li><img src="{{ asset('bundles/easyadmin/img/search%20icon.png') }}" alt="search_logo" class="header_search"></li>
+      </nav>
+      <div>
+        <img src="{{ asset('bundles/easyadmin/img/BURGER%20MENU@2x.png') }}" alt="burger menu" class="header_bg">
+      </div>
+    </div>
+  </header>
+
+  <section id="nom" class="section">
+    <a href="#">O.P.U</a>
+    <h1>Organisation des Planètes Unies</h1>
+    <p>Protégeons notre planète pour les années futures en délocalisant
+    votre industrie.
+    </p>
+    <div class="nom_discover">
+      <h3>DÉCOUVRIR
+        <div>
+          <img src="{{ asset('bundles/easyadmin/img/arrow@2x.png') }}" alt="down_arrow">
+        </div>
+      </h3>
+    </div>
+  </section>
+
+  <section id="presentation" class="section">
+    <div class="section_illustration">
+      <img src="{{ asset('bundles/easyadmin/img/concept@2x.png') }}" alt="cycle lunaire terrestre" class="section_img">
+    </div>
+    <div class="presentation_txt">
+      <h2 class="section_h">Présentation</h2>
+      <div class="presentation_txt_highlight highlight"></div>
+      <p class="section_p">Depuis maintenant 10 ans les déchets de
+      l'industrie à grande échelle ont la possibilité
+      de ne plus affecter l'air que l'on respire et celle
+      que respireront nos enfants.<br>
+      En effet, l’Organisation des Planètes Unies,
+      met en place un service de délocalisations
+      industrielles à échelle planétaire.<br>
+      Il est désormais possible de délocaliser les
+      usines polluantes dans un monde ou sa
+      production serait en adéquation avec
+      l’atmosphère.La délocalisation de votre
+      entreprise permet d’assainir votre vie.</p>
+    </div>
+  </section>
+
+  <div class="presentation_feature"></div>
+  <div class="presentation_feature2"></div>
+
+
+  <section id="advantages" class="section">
+    <h2 class="section_h">Avantages</h2>
+    <div class="advantages_txt_highlight highlight"></div>
+    <p class="section_p">
+      Notre programme de délocalisation est très avantageux pour les industries car en effet celle-ci disposerons d’une subvention lors de leur délocalisation. <br>
+      En effet  celle-ci sera calculer en fonction du taux de pollution diminuant sur terre lors de la délocalisation de l’industrie en question.<br>
+      De plus déplacer leur entreprise leur permettra de disposer d’autre d’avantages non négligeable tel que la suppression de main d’oeuvre ou encore la proximité de matière première nouvelle et moins chère.
+    </p>
+  </section>
+
+  <div class="advantages_feature"></div>
+  <div class="advantages_feature2"></div>
+
+  <section id="ecology" class="section">
+    <div class="section_illustration">
+      <img src="{{ asset('bundles/easyadmin/img/environement@2x.png') }}" alt="touriste en moutagne" class="section_img">
+    </div>
+    <div class="ecology_presentation">
+      <h2 class="section_h">Ecologie</h2>
+      <div class="ecology_txt_highlight highlight"></div>
+      <p class="section_p">
+        L'écologie industrielle est l’ensemble des pratiques qui ont pour but la réduction de la pollution industrielle.
+        Elle intègre ces différents champs de connaissances par des méthodes d’ingénieur ou d’ingénierie écologique. C’est pour cela, que nous avons délocaliser les entreprises, par types, sur les planètes qui leurs correspondent.<br>
+        L’atmosphère de ses planètes supportent en tous points la pollution que généreront les usines présentent sur leurs sols.
+      </p>
+    </div>
+  </section>
+
+  <div class="ecology_feature"></div>
+  <div class="ecology_feature2"></div>
+
+  <section id="automation" class="section">
+    <h2 class="section_h">Robotisation</h2>
+    <div class="automation_txt_highlight highlight"></div>
+    <p class="section_p">
+      L’usine du futur, ou usine 4.0, dispose de nombreux avantages.<br>
+      Ces nouvelles planètes aux systèmes de traitement de commandes et d’analyse des niveaux de production permettent entre autres : une meilleure organisation de la production, une utilisation plus efficace des ressources, une diminution des rejets, une atmosphère purifiée de la planète bleue et la robotisation humanoïde.
+    </p>
+  </section>
+
+  <div class="automation_feature"></div>
+  <div class="automation_feature2"></div>
+
+  <section id="generation" class="section">
+    <div class="section_illustration">
+      <img src="{{ asset('bundles/easyadmin/img/generation_futur@2x.png') }}" alt="famille sur la plage" class="section_img">
+    </div>
+    <div class="generation_presentation">
+      <h2 class="section_h">Générations futures</h2>
+      <div class="generation_txt_highlight highlight"></div>
+      <p class="section_p">
+        Les dernières décennies sont témoins des conséquences plus ou moins immédiates sur une partie de la population mondiale. Ces conséquences sont, en partie, le résultat d’un mode de vie basé sur de mauvaises valeurs.<br>
+        Aujourd’hui, nous remédions à cela en purifiant l’atmosphère.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer_container">
+
+      <div class="footer_linkContainer">
+        <a class="section_p" href="#">Conditions d'utilisation</a>
+        <a class="section_p" href="#">Confidentialité de l’information</a>
+        <a class="section_p" href="#">Contactez-nous</a>
+        <a class="section_p" href="#">Droits d’auteur</a>
+      </div>
+
+      <div class="footer_otherLinksContainer">
+        <div>
+          <img src="{{ asset('bundles/easyadmin/img/final%20logo@2x.png') }}" alt="OPU logo" class="footer_logo">
+        </div>
+        <a href="#" class="section_p">Organisation des Planètes Unies</a>
+      </div>
+    </div>
+
+      <div class="footer_link_networks">
+        <a href="#">
+          <img src="{{ asset('bundles/easyadmin/img/fb.png') }}" alt="page facebook">
+        </a>
+        <a href="#">
+          <img src="{{ asset('bundles/easyadmin/img/tw.png') }}" alt="compte twitter ">
+        </a>
+        <a href="#">
+          <img src="{{ asset('bundles/easyadmin/img/ln.png') }}" alt="compte LinkedIn">
+        </a>
+    </div>
+  </footer>
+    </div>
+        {% block body %}{% endblock %}
+        {% block javascripts %}<script src="{{ asset('bundles/easyadmin/javascript/script.js') }}"></script>{% endblock %}
+    </body>
+</html>
