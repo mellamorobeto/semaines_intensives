@@ -1,0 +1,20 @@
+.section{
+  padding: 0vw 9.06vw 0vw 12.7vw;
+}
+.section_illustration{
+  padding: 8.53vw 0vw 8.53vw 0vw;
+}
+.section_img{
+  width: 35vw;
+}
+.section_h{
+  font-size: 1.8vw;
+}
+.highlight{
+  background-color: #2651F5;
+  height: 1.875vw;
+  margin-top: -2.65vw;
+}
+.section_p{
+  font-size: 1.18vw;
+}
