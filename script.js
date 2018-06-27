@@ -8,6 +8,7 @@ for (var i = 0; i < li.length; i++) {
     }
     this.style.color = '#2651F5';
     this.style.borderBottom = 'solid 2px #2651F5';
+    this.style.transition = '0.2s';
     li[5].style.borderBottom = 'none';
   })
 }
@@ -25,3 +26,7 @@ for (var i = 0; i < a.length; i++) {
     a[2].style.color = 'black';
   })
 }
+
+setInterval(function(){
+  console.log(scrollY);
+})
