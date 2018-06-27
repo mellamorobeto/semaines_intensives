@@ -2,10 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="assets/styles/style.css">
-  <link rel="stylesheet" href="assets/styles/font.css">
-  <link rel="stylesheet" href="assets/styles/presets.css">
+  <title>OPU</title>
+  <link rel="stylesheet" media="screen and (min-width: 640px)" href="styles/desktop.css">
+  <link rel="stylesheet" media="screen and (device-width: 375px)" href="styles/mobile.css">
+  <link rel="stylesheet" media="screen and (max-width: 639px)" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/font.css">
+  <link rel="stylesheet" href="styles/presets.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
@@ -14,11 +16,25 @@
   <div class="deco3"></div>
 
   <header>
-    <div>
-      <img src="assets/images/final%20logo@2x.png" alt="OPU logo" class="header_logo">
+    <div class="header_connection">
+      <a href="#">Se connecter</a>
+      <a href="#">FR</a><a href="#">|</a><a href="#">EN</a>
     </div>
-    <div>
-      <img src="assets/images/BURGER%20MENU@2x.png" alt="burger menu" class="header_bg">
+    <div class="header_topBar">
+      <div>
+        <img src="img/final%20logo@2x.png" alt="OPU logo" class="header_logo">
+      </div>
+      <nav class="theNav">
+        <li>Présentation du concept</li>
+        <li>Simulataur</li>
+        <li>Les planètes</li>
+        <li>Les entreprises</li>
+        <li>Se délocaliser</li>
+        <li><img src="img/search%20icon.png" alt="search_logo" class="header_search"></li>
+      </nav>
+      <div>
+        <img src="img/BURGER%20MENU@2x.png" alt="burger menu" class="header_bg">
+      </div>
     </div>
   </header>
 
@@ -29,7 +45,7 @@
     <div class="nom_discover">
       <h3>DÉCOUVRIR
         <div>
-          <img src="assets/images/arrow@2x.png" alt="down_arrow">
+          <img src="img/arrow@2x.png" alt="down_arrow">
         </div>
       </h3>
     </div>
@@ -37,7 +53,7 @@
 
   <section id="presentation" class="section">
     <div class="section_illustration">
-      <img src="assets/images/concept@2x.png" alt="cycle lunaire terrestre" class="section_img">
+      <img src="img/concept@2x.png" alt="cycle lunaire terrestre" class="section_img">
     </div>
     <div class="presentation_txt">
       <h2 class="section_h">Présentation</h2>
@@ -76,7 +92,7 @@
 
   <section id="ecology" class="section">
     <div class="section_illustration">
-      <img src="assets/images/environement@2x.png" alt="touriste en moutagne" class="section_img">
+      <img src="img/environement@2x.png" alt="touriste en moutagne" class="section_img">
     </div>
     <div class="ecology_presentation">
       <h2 class="section_h">Ecologie</h2>
@@ -106,7 +122,7 @@
 
   <section id="generation" class="section">
     <div class="section_illustration">
-      <img src="assets/images/generation_futur@2x.png" alt="famille sur la plage" class="section_img">
+      <img src="img/generation_futur@2x.png" alt="famille sur la plage" class="section_img">
     </div>
     <div class="ecology_presentation">
       <h2 class="section_h">Générations futures</h2>
@@ -128,22 +144,23 @@
     </div>
     <div class="footer_otherLinksContainer">
       <div>
-        <img src="assets/images/final%20logo@2x.png" alt="OPU logo">
+        <img src="img/final%20logo@2x.png" alt="OPU logo">
       </div>
       <a href="#" class="section_p">Organisation des Planètes Unies</a>
     </div>
     <div class="footer_link_networks">
       <a href="#">
-        <img src="assets/images/fb.png" alt="page facebook">
+        <img src="img/fb.png" alt="page facebook">
       </a>
       <a href="#">
-        <img src="assets/images/tw.png" alt="compte twitter ">
+        <img src="img/tw.png" alt="compte twitter ">
       </a>
       <a href="#">
-        <img src="assets/images/ln.png" alt="compte LinkedIn">
+        <img src="img/ln.png" alt="compte LinkedIn">
       </a>
     </div>
   </footer>
 
 </body>
+<script src="script.js"></script>
 </html>

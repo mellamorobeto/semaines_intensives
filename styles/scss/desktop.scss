@@ -1,0 +1,37 @@
+header{
+  font-size: 1.38vw;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0vw 13vw 0vw 8vw;
+  .header_connection{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    a{
+      text-decoration: none;
+      padding: 1.4vw 1.4vw 0vw 0vw;
+      color: black;
+    }
+  }
+  .header_topBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .header_logo{
+      width: 6.18vw;
+    }
+    nav{
+      padding: 3vw 1.4vw 0vw 1.4vw;
+      li{
+        display: inline;
+        padding: 0vw 1vw 0vw 1vw;
+        cursor: pointer;
+      }
+      .header_search{
+        width: 1.94vw;
+      }
+    }
+    .header_bg{
+      display: none;
+    }
+  }
+}
