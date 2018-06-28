@@ -36,6 +36,11 @@ class Website
      */
     private $createdAt;
 
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $statut;
+
     public function getId()
     {
         return $this->id;
@@ -85,6 +90,21 @@ class Website
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+    public function __toString() {
+        return $this->name;
+    }
+
+    public function getStatut(): ?string
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(string $statut): self
+    {
+        $this->statut = $statut;
 
         return $this;
     }

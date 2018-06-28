@@ -27,7 +27,8 @@
       <div class="siteContainer">
        <p>{{ site.name }}</p>
       <p>{{ site.industrie }}</p>
-      <p>{{ site.createdAt ? site.createdAt|date('Y-m-d') : '' }}</p></br>
+      <p>{{ site.createdAt ? site.createdAt|date('Y-m-d') : '' }}</p>
+      <p>{{ site.statut }}</p></br>
       {# <a href="{{ path('website_show') }}">Show website</a> </br> #}
       </div>
       {% endfor %}

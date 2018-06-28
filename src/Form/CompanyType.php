@@ -44,6 +44,10 @@ class CompanyType extends AbstractType
             ->add('nameCompany')
             ->add('logo', FileType::class, array(
                 'label' => 'Votre Logo : ',
+                'data_class' => null, 
+                'attr' => array(
+                    'name' => 'logo',
+                ),
                 ))
             ->add('tel')
             ->add('mail')
