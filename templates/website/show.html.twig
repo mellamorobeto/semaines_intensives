@@ -1,9 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Website{% endblock %}
-
+{% block stylesheets %}
+  <link rel="stylesheet" href="style-companies.css">
+  <link rel="stylesheet" href="./flexboxgrid/css/flexboxgrid.min.css" type="text/css" >
+  {% endblock %}
 {% block body %}
     <h1>Website</h1>
+
 
     <table class="table">
         <tbody>
@@ -33,6 +37,9 @@
             </tr>
         </tbody>
     </table>
+    <body>
+
+
 
     <a href="{{ path('website_index') }}">back to list</a>
 
