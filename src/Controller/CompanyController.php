@@ -40,18 +40,18 @@ class CompanyController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            /**
-             * @var UploadedFile $file
-             */
-            $file = $company->getLogo();
-            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            // /**
+            //  * @var UploadedFile $file
+            //  */
+            // $file = $company->getLogo();
+            // $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
 
-            $file->move(
-                $this->getParameter('image_directory')
-                ,$fileName
-            );
+            // $file->move(
+            //     $this->getParameter('image_directory')
+            //     ,$fileName
+            // );
 
-            $company->setLogo($fileName);
+            // $company->setLogo($fileName);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($company);

@@ -26,7 +26,6 @@
       <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Les planètes</a></li>
       <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Les entreprises</a></li>
       <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Se délocaliser</a></li>
-      <li><img src="{{ asset('bundles/easyadmin/img/search%20icon.png') }}" alt="search_logo" class="header_search"></li>
   </div>
 
   <div class="deco"></div>
@@ -46,8 +45,8 @@
         <li><a href="#">Présentation du concept</a></li>
         <li><a href="#">Simulateur</a></li>
         <li><a href="#">Les planètes</a></li>
-        <li><a href="#">Les entreprises</a></li>
-        <li><a href="#">Se délocaliser</a></li>
+        <li><a href="{{ path('company_index') }}">Les entreprises</a></li>
+        <li><a href="{{ path('company_new') }}">Se délocaliser</a></li>
         <li><img src="{{ asset('bundles/easyadmin/img/search%20icon.png') }}" alt="search_logo" class="header_search"></li>
       </nav>
       <div>
