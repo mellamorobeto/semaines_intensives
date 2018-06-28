@@ -1,0 +1,187 @@
+body {
+  font-family: "Avenir","Helvetica","Arial", sans-serif;
+  color: #1A1A1A;
+  margin: 0;
+
+}
+.section {
+margin-bottom: 25px;
+margin-right: 20px;
+
+}
+.introduction{
+  width: 308px;
+  margin: 0 auto;
+}
+.textIntroduction{
+font-weight: 500;
+margin: 80px 0px 40px 0px;
+line-height: 25px;
+
+}
+
+.sectionTitle{
+padding-left: 35px;
+font-size: 12px;
+font-weight: 500;
+color: #2651F5;
+text-transform: uppercase;
+margin-top: 60px;
+margin-bottom: 30px;
+}
+
+.scrollCompany {
+  overflow: auto;
+  /* white-space: nowrap; */
+  display: flex;
+}
+.companyContainer{
+  border-style: solid;
+  border-color: #DE7140;
+  border-width: 1px;
+  width: 215px;
+  margin-left: 50px;
+}
+.name {
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+.description{
+  padding-left: 20px;
+  width: 170px;
+  height: 125px;
+  font-size: 15px;
+  line-height: 23px;
+  margin-top:0px;
+  display: block;
+}
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+.vale {
+  width: 120px;
+  height: 80px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+.am {
+  width: 150px;
+  height: 60px;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+.johnson {
+  width: 150px;
+  height: 50px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.roche{
+  width: 120px;
+  height: 55px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+.sanofi {
+  width: 100px;
+  height: 20px;
+  padding-top: 30px;
+  margin-bottom: 60px;
+}
+.exxonmobil {
+  width: 140px;
+  height: 60px;
+  padding-top: 20px;
+}
+.petro {
+  width: 70px;
+  height: 65px;
+  padding-top: 20px;
+}
+.shell {
+  padding-top: 20px;
+  width: 70px;
+  height: 65px;
+}
+.nestle {
+  width: 85px;
+  height: 80px;
+}
+.danone {
+  padding-top: 20px;
+  width: 130px;
+  height: 60px;
+}
+.unilever {
+  padding-top: 20px;
+  width: 70px;
+  height: 60px;
+}
+.paprec{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100px;
+  height: 70px;
+}
+.derichebourg {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 140px;
+  height: 70px;
+}
+.recyc {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  width: 140px;
+  height: 40px;
+}
+.hm {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 80px;
+  height: 40px;
+}
+.billabong {
+  padding-top: 20px;
+  width: 80px;
+  height: 80px;
+}
+.adidas {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 80px;
+  height: 60px;
+}
+
+@media (min-width: 750px) {
+  body {
+    overflow-x: hidden;
+  }
+  .sectionTitle {
+    margin-left: 15px;
+  }
+  .textIntroduction{
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+  }
+  .introduction {
+    margin-top: 20px;
+    margin-left: 50px;
+    padding : 0;
+    display: inline-block;
+    width: 100%;
+  }
+  .section {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width:1200px) {
+  .sectionTitle {
+    margin-left: 35px;
+  }
+}
