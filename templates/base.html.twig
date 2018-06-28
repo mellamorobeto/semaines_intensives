@@ -34,7 +34,6 @@
 
   <header>
     <div class="header_connection">
-      <a href="#">Mon compte</a>
       <a href="#">FR</a><a href="#">|</a><a href="#">EN</a>
     </div>
     <div class="header_topBar">
@@ -42,8 +41,8 @@
         <img src="{{ asset('bundles/easyadmin/img/final%20logo@2x.png') }}" alt="OPU logo" class="header_logo">
       </div>
       <nav class="theNav">
-        <li><a href="#">Présentation du concept</a></li>
-        <li><a href="#">Simulateur</a></li>
+        <li><a href="{{ path('home') }}">Présentation du concept</a></li>
+        <li><a href="{{ path('simulator') }}">Simulateur</a></li>
         <li><a href="{{ path('planete') }}">Les planètes</a></li>
         <li><a href="{{ path('company_index') }}">Les entreprises</a></li>
         <li><a href="{{ path('company_new') }}">Se délocaliser</a></li>

@@ -1,0 +1,179 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+  {% block stylesheets %}
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/desktop.css') }}">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/mobile.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/easyadmin/stylesheet/font.css') }}">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_mobile.css') }}">
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_desktop.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/flexboxgrid.min.css') }}" rel="stylesheet">
+        {% endblock %}
+
+{% block body %}
+<section class="section" id="simulator">
+    <form class="section_form">
+      <div class="border">
+      <div class="form_entreprise">
+        <p>Statut de mon entreprise</p>
+        <select name="type_entreprise">
+          <option value="GE">Grande entreprise (GE)</option>
+          <option value="ETI">Taillle intérmédiaire (ETI)</option>
+          <option value="PME">Petite et moyenne (PME)</option>
+          <option value="TPE">Micro entreprise (TPE)</option>
+        </select>
+      </div>
+
+      <div class="form_materieux">
+        <p>Mes matériaux </p>
+        <input type="checkbox" value="Unobtanium" />
+        <label>Unobtanium</label>
+        <input type="checkbox" value="Adamantium" />
+        <label>Adamantium</label>
+        <input type="checkbox" value="Gundamium" />
+        <label>Gundamium</label>
+        <input type="checkbox" value="Gallium" />
+        <label>Gallium</label>
+        <input type="checkbox" value="Kryptonite" />
+        <label>Kryptonite</label>
+        <input type="checkbox" value="Calystène" />
+        <label>Calystène</label>
+        <input type="checkbox" value="Vibranium" />
+        <label>Vibranium</label>
+        <input type="checkbox" value="Fluoxytus" />
+        <label>Fluoxytus</label>
+        <input type="checkbox" value="Mandalorien" />
+        <label>Mandalorien</label>
+        <input type="checkbox" value="Tibanna" />
+        <label>Tibanna</label>
+        <input type="checkbox" value="Latinium" />
+        <label>Latinium</label>
+        <input type="checkbox" value="Palitrolium" />
+        <label>Palitrolium</label>
+        <input type="checkbox" value="Orichalque" />
+        <label>Orichalque</label>
+        <input type="checkbox" value="Ébonite" />
+        <label>Ébonite</label>
+        <input type="checkbox" value="Polyestium" />
+        <label>Polyestium</label>
+        <input type="checkbox" value="Zyrtex" />
+        <label>Zyrtex</label>
+        <input type="checkbox" value="Bifröst" />
+        <label>Bifröst</label>
+        <input type="checkbox" value="Granitium" />
+        <label>Granitium</label>
+        <input type="checkbox" value="Tomacco" />
+        <label>Tomacco</label>
+        <input type="checkbox" value="Cluseol" />
+        <label>Cluseol</label>
+        <input type="checkbox" value="Uradium" />
+        <label>Uradium</label>
+        <input type="checkbox" value="Plastacier" />
+        <label>Plastacier</label>
+        <input type="checkbox" value="Carbonite" />
+        <label>Carbonite</label>
+        <input type="checkbox" value="Xalitium" />
+        <label>Xalitium</label>
+      </div>
+
+      <div class="form_produits">
+        <p>Mes produits manufacturés</p>
+        <input type="checkbox" value="Cuivre" />
+        <label>Cuivre</label>
+        <input type="checkbox" value="Pièces détachées" />
+        <label>Pièces détachées</label>
+        <input type="checkbox" value="Magnésium" />
+        <label>Magnésium</label>
+        <input type="checkbox" value="Fourrage" />
+        <label>Fourrage</label>
+        <input type="checkbox" value="Kérosène" />
+        <label>Kérosène</label>
+        <input type="checkbox" value="Paraffine" />
+        <label>Paraffine</label>
+        <input type="checkbox" value="Coton" />
+        <label>Coton</label>
+        <input type="checkbox" value="Acide salicylique" />
+        <label>Acide salicylique</label>
+        <input type="checkbox" value="Engrais chimiques" />
+        <label>Engrais chimiques</label>
+        <input type="checkbox" value="Copeaux" />
+        <label>Copeaux</label>
+        <input type="checkbox" value="Laine" />
+        <label>Laine</label>
+        <input type="checkbox" value="Broyeur plastique" />
+        <label>Broyeur plastique</label>
+      </div>
+      </div>
+
+      <input class="input" type="reset" value="ANNULER" title="anul pd" />
+      <input class="input" type="submit" value="VALIDER" title="valid ta mer" />
+
+    </form>
+  </section>
+
+  <section class="section" id="planete" style="display:none;">
+    <div class="border">
+      <div>
+        <img src="{{ asset('bundles/easyadmin/img/Alpha.png') }}" alt="planete idéale" class="planete_img">
+      </div>
+
+      <div class="border_infos">
+        <h2 class="planete_name">Alpha</h2>
+        <h3>Matériaux</h3>
+        <ul class="planete_materials">
+          <li>Orichalque</li>
+          <li>Ebonite</li>
+          <li>Polyestium</li>
+          <li>Zyrtex</li>
+        </ul>
+        <h3>Produits Manufacturés</h3>
+        <ul class="planete_products">
+          <li>Coton</li>
+          <li>Laine</li>
+        </ul>
+        <ul class="planete_helps">
+          <li>% de pollution terreste en moins</li>
+          <li>€ de subventions réclamables</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer_container">
+
+      <div class="footer_linkContainer">
+        <a class="section_p" href="#">Conditions d'utilisation</a>
+        <a class="section_p" href="#">Confidentialité de l’information</a>
+        <a class="section_p" href="#">Contactez-nous</a>
+        <a class="section_p" href="#">Droits d’auteur</a>
+      </div>
+
+      <div class="footer_otherLinksContainer">
+        <div>
+          <img src="{{ asset('bundles/easyadmin/img/final%20logo@2x.png') }}" alt="OPU logo" class="footer_logo">
+        </div>
+        <a href="#" class="section_p">Organisation des Planètes Unies</a>
+      </div>
+    </div>
+
+      <div class="footer_link_networks">
+        <a href="#">
+          <img src="{{asset('bundles/easyadmin/img/fb.png') }}" alt="page facebook">
+        </a>
+        <a href="#">
+          <img src="{{asset('bundles/easyadmin/img/tw.png') }}" alt="compte twitter ">
+        </a>
+        <a href="#">
+          <img src="{{asset('bundles/easyadmin/img/ln.png') }}" alt="compte LinkedIn">
+        </a>
+    </div>
+  </footer>
+  </body>
+</html>
+  {% endblock %}
+        {% block javascripts %}<script src="{{ asset('bundles/easyadmin/javascript/simulateur.js') }}"></script>{% endblock %}
+
