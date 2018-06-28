@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{% block title %}Les planetes{% endblock %}</title>
+{% extends 'base.html.twig' %}
+  
+  {% block title %}Les planetes{% endblock %}
         {% block stylesheets %}
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/desktop.css') }}">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/mobile.css') }}">
+        <link rel="stylesheet" href="styles/font.css">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_mobile.css') }}">
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_desktop.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/flexboxgrid.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
   <link rel="stylesheet" href="{{ asset('bundles/easyadmin/stylesheet/planetes.css') }}">
-{% endblock %}
-</head>
-
+    {% endblock %}
+{% block body %}
 <body>
   <section class="firstPlanet">
     <div class="container">
@@ -22,7 +24,10 @@
               <h4 class="industry">INDUSTRIE SIDÉLURGIQUE</h4>
               <h2 class="planetName">NIDAVELLIR</h2>
             </div>
-            <img class="pic left" src="{{ asset('bundles/easyadmin/img/Oval.png') }}" alt="">
+            <div class="picContainer">
+            <img class="pic left" src="img/Oval.png" alt="">
+          </div>
+            <img class="pic left first" src="{{ asset('bundles/easyadmin/img/Nidavellir.png') }}" alt="">
           </div>
         </div>
       </div>
@@ -48,7 +53,7 @@
               <h4 class="industry">INDUSTRIE PHARMACEUTIQUE</h4>
               <h2 class="planetName">KAMINO</h2>
             </div>
-            <img class="pic" src="{{ asset('bundles/easyadmin/img/Oval.png') }}" alt="">
+            <img class="pic" src="{{ asset('bundles/easyadmin/img/Kamino.png') }}" alt="">
           </div>
         </div>
       </div>
@@ -74,7 +79,7 @@
               <h4 class="industry">INDUSTRIE PÉTROLIÈRE</h4>
               <h2 class="planetName">SAKAAR</h2>
             </div>
-            <img class="pic left" src="{{ asset('bundles/easyadmin/img/Oval.png') }}" alt="">
+            <img class="pic left" src="{{ asset('bundles/easyadmin/img/Sakaar.png') }}" alt="">
           </div>
           <p class="planetDescription right">La planète Sakaar est tellurique en opposition aux planètes gazeuses et aux planètes composé essentiellement de roches et de métal. Sa surface est solide et composé de matériaux non volatils. <br> <br> Elle dispose de l'enssemble des ressources
             nécessaires au fonctionnement d'un système pétrolier. En effet son sous sol regorge de matière organique. Les matières présentent sont le mandalorien, le tibana, le latinium et le palitrolium.</p>
@@ -95,7 +100,7 @@
               <h4 class="industry">INDUSTRIE DU TEXTILE</h4>
               <h2 class="planetName">ALPHA</h2>
             </div>
-            <img class="pic" src="{{ asset('bundles/easyadmin/img/Oval.png') }}" alt="">
+            <img class="pic" src="{{ asset('bundles/easyadmin/img/Alpha.png') }}" alt="">
           </div>
           <p class="planetDescription">Alpha rassemble l'ensemble des conditions naturelles et culturelles qui constitue la production de matière organique et synthétique. <br> <br> Les produits manufaturés que l'on trouve sur cette planète sont la laine et le coton. <br> <br> En
             terme de matières premières, l’orichalque, l’ébonite, le polyestium, et le zyrtex y sont produites.
@@ -118,7 +123,7 @@
               <h4 class="industry">INDUSTRIE AGROALIMENTAIRE</h4>
               <h2 class="planetName">XANDAR</h2>
             </div>
-            <img class="pic left" src="{{ asset('bundles/easyadmin/img/Oval.png') }}" alt="">
+            <img class="pic left" src="{{ asset('bundles/easyadmin/img/Xandar.png') }}" alt="">
           </div>
           <p class="planetDescription right">Xandar est réputé pour sa terre arable propice aux cultures maraîchères et céréalières. <br> <br> Les produits manufaturés et matières premières que l’on trouve sur cette planète sont l’engrais chimiques, le fourrage, le bifröst, le granitium,
             le tomacco et le cluseol.
@@ -140,7 +145,7 @@
               <h4 class="industry">INDUSTRIE DU RECYCLAGE</h4>
               <h2 class="planetName">MUSTAFAR</h2>
             </div>
-            <img class="pic" src="{{ asset('bundles/easyadmin/img/Oval.png') }}" alt="">
+            <img class="pic first" src="{{ asset('bundles/easyadmin/img/Mustafar.png') }}" alt="">
           </div>
           <p class="planetDescription">La magmatique planète Mustafar est riche en énergie. Son environnement est idéal pour le recyclage. <br> <br> L’uradium, le lastacier, la carbonite le xalitium ainsi que les copeaux et le broyeur plastique sont les matières premières et les
             produis manufacturés que l’on retrouve sur Mustafar.
@@ -149,6 +154,6 @@
       </div>
     </div>
   </section>
-{% block body %}{% endblock %}
-</body>
+  </body>
 </html>
+{% endblock %}

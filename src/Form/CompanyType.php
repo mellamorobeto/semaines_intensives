@@ -75,44 +75,70 @@ class CompanyType extends AbstractType
                     'class' => 'planete'
                 ),
             ))
-            ->add('products',HiddenType::class)
-            // , array(
-            //     'choices' => array(
-            //         'Nivadellir' => array(
-            //             'Produit 1' => 'Produit 1',
-            //             'Produit 2' => 'Produit 2',
-            //             'Produit 3' => 'Produit 3',
-            //         ),
-            //         'Kamino' => array(
-            //             'Produit 1' => 'Produit 1',
-            //             'Produit 2' => 'Produit 2',
-            //             'Produit 3' => 'Produit 3',
-            //         ),
-            //         'Alpha' => array(
-            //             'Produit 1' => 'Produit 1',
-            //             'Produit 2' => 'Produit 2',
-            //             'Produit 3' => 'Produit 3',
-            //         ),
-            //         'Sakaar' => array(
-            //             'Produit 1' => 'Produit 1',
-            //             'Produit 2' => 'Produit 2',
-            //             'Produit 3' => 'Produit 3',
-            //         ),
-            //         'Xandar' => array(
-            //             'Produit 1' => 'Produit 1',
-            //             'Produit 2' => 'Produit 2',
-            //             'Produit 3' => 'Produit 3',
-            //         ),
-            //         'Mustafar' => array(
-            //             'Produit 1' => 'Produit 1',
-            //             'Produit 2' => 'Produit 2',
-            //             'Produit 3' => 'Produit 3',
-            //         ),
-            //     ),
-            // ))
-            ->add('materials', HiddenType::class, array(
-                'label'    => 'Show this entry publicly?',
-                'required' => false,
+            ->add('products',ChoiceType::class, array(
+                'multiple' => false,
+                'choices' => array(
+                    'Nivadellir' => array(
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
+                    ),
+                    'Kamino' => array(
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
+                    ),
+                    'Alpha' => array(
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
+                    ),
+                    'Sakaar' => array(
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
+                    ),
+                    'Xandar' => array(
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
+                    ),
+                    'Mustafar' => array(
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
+                    ),
+                ),
+            ))
+                
+            ->add('materials', ChoiceType::class, array(
+                'multiple' => false ,
+                'choices' => array(
+                    'Nivadellir' => array(
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
+                    ),
+                    'Kamino' => array(
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
+                    ),
+                    'Alpha' => array(
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
+                    ),
+                    'Sakaar' => array(
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
+                    ),
+                    'Xandar' => array(
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
+                    ),
+                    'Mustafar' => array(
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
+                    ),
+                ),
             ))
         ;
     }
