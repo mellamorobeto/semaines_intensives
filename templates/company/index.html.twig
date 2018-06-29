@@ -30,12 +30,12 @@
           <div class="scrollCompany">
 {% for company in companies %}
 <a href="{{ path('company_show', {'id': company.id}) }}">
-              <div class="companyContainer">
-                <img class="logo eramet" src="{{ asset('bundles/easyadmin/img/eramet-mobile.png') }}" alt="logoCompany">
-                <h5 class="name">{{company.name}}</h5>
-                <p class="description">{{company.description}}</p>
-              </div></a>
-                    <a href="{{ path('company_edit', {'id': company.id}) }}">edit</a>
+  <div class="companyContainer">
+    <img class="logo eramet" src="{{ asset('bundles/easyadmin/img/eramet-mobile.png') }}" alt="logoCompany">
+        <h5 class="name">{{company.name}}</h5>
+            <p class="description">{{company.description}}</p>
+    </div>
+  </a>
         {% endfor %}
               <div class="companyContainer">
                 <img class="logo eramet" src="{{ asset('bundles/easyadmin/img/eramet-mobile.png') }}" alt="logoCompany">
@@ -144,7 +144,7 @@
             </div>
 
             <div class="companyContainer">
-              <img class="logo unilever" src="img/unilever-mobile.png" alt="logoCompany">
+              <img class="logo unilever" src="{{ asset('bundles/easyadmin/img/unilever-mobile.png') }}" alt="logoCompany">
               <h5 class="name">Unilever</h5>
               <p class="description">Unilever est une multinationale anglo-néerlandaise. Il s'agit d'un des plus gros acteur mondiale sur le marché de l'agroalimentaire.</p>
             </div>
@@ -163,19 +163,19 @@
 
           <div class="scrollCompany">
             <div class="companyContainer">
-              <img class="logo paprec" src="img/paprec-mobile.png" alt="logoCompany">
+              <img class="logo paprec" src="{{ asset('bundles/easyadmin/img/paprec-mobile.png') }}" alt="logoCompany">
               <h5 class="name">Paprec</h5>
               <p class="description">Paprec Group est une entreprise française de collecte et de recyclage de déchets industriels et ménagers fondée en 1994.</p>
             </div>
 
             <div class="companyContainer">
-              <img class="logo derichebourg" src="img/derichebourg-mobile.png" alt="logoCompany">
+              <img class="logo derichebourg" src="{{ asset('bundles/easyadmin/img/derichebourg-mobile.png') }}" alt="logoCompany">
               <h5 class="name">Derichebourg</h5>
               <p class="description">Derichebourg est un acteur majeur sur le plan international des services aux entreprises et à l'environement.</p>
             </div>
 
             <div class="companyContainer">
-              <img class="logo recyc" src="img/recy-mobile.png" alt="logoCompany">
+              <img class="logo recyc" src="{{ asset('bundles/easyadmin/img/recy-mobile.png') }}" alt="logoCompany">
               <h5 class="name">Recy'go</h5>
               <p class="description">Entreprise française qui propose des solutions de tri et de recyclage pour vos déchets de bureau.</p>
             </div>
@@ -194,19 +194,19 @@
 
           <div class="scrollCompany">
             <div class="companyContainer">
-              <img class="logo hm" src="img/h&m-mobile.png" alt="logoCompany">
+              <img class="logo hm" src="{{ asset('bundles/easyadmin/img/h&m-mobile.png') }}" alt="logoCompany">
               <h5 class="name">H&m</h5>
               <p class="description">Hennes et Mauritz, est une entreprise et chaîne de magasins suédoise du prêt-à-porter pour une femme, enfant et homme.</p>
             </div>
 
             <div class="companyContainer">
-              <img class="logo billabong" src="img/billabong-mobile.png" alt="logoCompany">
+              <img class="logo billabong" src="{{ asset('bundles/easyadmin/img/billabong-mobile.png') }}" alt="logoCompany">
               <h5 class="name">Billabong</h5>
               <p class="description">Entreprise australienne sécialisée dans les vêtements et d'équipements de surf.</p>
             </div>
 
             <div class="companyContainer">
-              <img class="logo adidas" src="img/adidas-mobile.png" alt="logoCompany">
+              <img class="logo adidas" src="{{ asset('bundles/easyadmin/img/adidas-mobile.png') }}" alt="logoCompany">
               <h5 class="name">Adidas</h5>
               <p class="description">Adidas est une firme allemande, spécialisée dans la fabrication d'articles de sport.</p>
             </div>
