@@ -1,3 +1,4 @@
+{% extends 'base.html.twig' %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,46 +16,7 @@
         {% endblock %}
     </head>
     <body>
-    <div>
-    <div class="bg_menu">
-    <div class="close">
-      <img src="{{ asset('bundles/easyadmin/img/cancel.svg') }}" alt="fermer" style="width: 5vw;padding: 2vw 2vw 2vw 2vw;">
-    </div>
-    <nav>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Présentation du concept</a></li>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Simulateur</a></li>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Les planètes</a></li>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Les entreprises</a></li>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Se délocaliser</a></li>
-  </div>
-
-  <div class="deco"></div>
-  <div class="deco2"></div>
-  <div class="deco3"></div>
-
-  <header>
-    <div class="header_connection">
-      <a href="#">Se connecter</a>
-      <a href="#">FR</a><a href="#">|</a><a href="#">EN</a>
-    </div>
-    <div class="header_topBar">
-      <div class="thebg">
-        <img src="{{ asset('bundles/easyadmin/img/final%20logo@2x.png') }}" alt="OPU logo" class="header_logo">
-      </div>
-      <nav class="theNav">
-        <li><a href="#">Présentation du concept</a></li>
-        <li><a href="#">Simulateur</a></li>
-        <li><a href="#">Les planètes</a></li>
-        <li><a href="{{ path('company_index') }}">Les entreprises</a></li>
-        <li><a href="{{ path('company_new') }}">Se délocaliser</a></li>
-        <li><img src="{{ asset('bundles/easyadmin/img/search%20icon.png') }}" alt="search_logo" class="header_search"></li>
-      </nav>
-      <div>
-        <img src="{{ asset('bundles/easyadmin/img/BURGER%20MENU@2x.png') }}" alt="burger menu" class="header_bg">
-      </div>
-    </div>
-  </header>
-
+    
   <section id="nom" class="section">
     <a href="#">O.P.U</a>
     <h1>Organisation des Planètes Unies</h1>

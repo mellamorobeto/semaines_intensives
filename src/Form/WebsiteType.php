@@ -17,6 +17,7 @@ class WebsiteType extends AbstractType
     {
         $builder
             ->add('name', ChoiceType::class, array(
+                'label' => 'Planete choisit',
                 'choices'  => array(
                     'Nidavellir' => 'Nidavellir',
                     'Kamino' => 'Kamino' ,
@@ -31,6 +32,7 @@ class WebsiteType extends AbstractType
                     'empty_data' => 'En cours',
             ))
             ->add('industrie',ChoiceType::class, array(
+                'label' => 'Industrie choisit',
                 'choices'  => array(
                     'Pétrolière' => 'Pétrolière',
                     'Sidérurgie' =>'Sidérurgie',
@@ -42,6 +44,7 @@ class WebsiteType extends AbstractType
             ))
             ->add('company')
             ->add('createdAt', DateTimeType::class, array(
+                'label' => 'Creer le',
                 'placeholder' => array(
                     'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
                 )

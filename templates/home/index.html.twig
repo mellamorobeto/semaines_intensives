@@ -1,9 +1,6 @@
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}OPU!{% endblock %}</title>
+{% extends 'base.html.twig' %}
+      {% block title %}OPU!{% endblock %}
         {% block stylesheets %}
         <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/desktop.css') }}">
         <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/mobile.css') }}">
@@ -14,48 +11,8 @@
         <link href="{{ asset('bundles/easyadmin/stylesheet/styles.css') }}" rel="stylesheet">
         <link href="{{ asset('bundles/easyadmin/stylesheet/flexboxgrid.min.css') }}" rel="stylesheet">
         {% endblock %}
-    </head>
+  {% block body %}
     <body>
-    <div>
-    <div class="bg_menu">
-    <div class="close">
-      <img src="{{ asset('bundles/easyadmin/img/cancel.svg') }}" alt="fermer" style="width: 5vw;padding: 2vw 2vw 2vw 2vw;">
-    </div>
-    <nav>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Présentation du concept</a></li>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Simulateur</a></li>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Les planètes</a></li>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Les entreprises</a></li>
-      <li><img src="{{ asset('bundles/easyadmin/img/right-arrow.svg') }}" alt="aller à" style="width:3vw;"><a href="#"> Se délocaliser</a></li>
-  </div>
-
-  <div class="deco"></div>
-  <div class="deco2"></div>
-  <div class="deco3"></div>
-
-  <header>
-    <div class="header_connection">
-      <a href="#">Se connecter</a>
-      <a href="#">FR</a><a href="#">|</a><a href="#">EN</a>
-    </div>
-    <div class="header_topBar">
-      <div class="thebg">
-        <img src="{{ asset('bundles/easyadmin/img/final%20logo@2x.png') }}" alt="OPU logo" class="header_logo">
-      </div>
-      <nav class="theNav">
-        <li><a href="#">Présentation du concept</a></li>
-        <li><a href="#">Simulateur</a></li>
-        <li><a href="{{ path('planete') }}">Les planètes</a></li>
-        <li><a href="{{ path('company_index') }}">Les entreprises</a></li>
-        <li><a href="{{ path('company_new') }}">Se délocaliser</a></li>
-        <li><img src="{{ asset('bundles/easyadmin/img/search%20icon.png') }}" alt="search_logo" class="header_search"></li>
-      </nav>
-      <div>
-        <img src="{{ asset('bundles/easyadmin/img/BURGER%20MENU@2x.png') }}" alt="burger menu" class="header_bg">
-      </div>
-    </div>
-  </header>
-
   <section id="nom" class="section">
     <a href="#">O.P.U</a>
     <h1>Organisation des Planètes Unies</h1>
@@ -102,7 +59,7 @@
     <div class="advantages_txt_highlight highlight"></div>
     <p class="section_p">
       Notre programme de délocalisation est très avantageux pour les industries car en effet celle-ci disposerons d’une subvention lors de leur délocalisation. <br>
-      En effet  celle-ci sera calculer en fonction du taux de pollution diminuant sur terre lors de la délocalisation de l’industrie en question.<br>
+      En effet  celle-ci sera calculé en fonction du taux de pollution diminuant sur terre lors de la délocalisation de l’industrie en question.<br>
       De plus déplacer leur entreprise leur permettra de disposer d’autre d’avantages non négligeable tel que la suppression de main d’oeuvre ou encore la proximité de matière première nouvelle et moins chère.
     </p>
   </section>
@@ -154,38 +111,10 @@
     </div>
   </section>
 
-  <footer>
-    <div class="footer_container">
-
-      <div class="footer_linkContainer">
-        <a class="section_p" href="#">Conditions d'utilisation</a>
-        <a class="section_p" href="#">Confidentialité de l’information</a>
-        <a class="section_p" href="#">Contactez-nous</a>
-        <a class="section_p" href="#">Droits d’auteur</a>
-      </div>
-
-      <div class="footer_otherLinksContainer">
-        <div>
-          <img src="{{ asset('bundles/easyadmin/img/final%20logo@2x.png') }}" alt="OPU logo" class="footer_logo">
-        </div>
-        <a href="#" class="section_p">Organisation des Planètes Unies</a>
-      </div>
-    </div>
-
-      <div class="footer_link_networks">
-        <a href="#">
-          <img src="{{ asset('bundles/easyadmin/img/fb.png') }}" alt="page facebook">
-        </a>
-        <a href="#">
-          <img src="{{ asset('bundles/easyadmin/img/tw.png') }}" alt="compte twitter ">
-        </a>
-        <a href="#">
-          <img src="{{ asset('bundles/easyadmin/img/ln.png') }}" alt="compte LinkedIn">
-        </a>
-    </div>
-  </footer>
-    </div>
-        {% block body %}{% endblock %}
-        {% block javascripts %}<script src="{{ asset('bundles/easyadmin/javascript/script.js') }}"></script>{% endblock %}
+  {{ include('footer.html.twig') }}
+    {% block javascripts %}<script src="{{ asset('bundles/easyadmin/javascript/script.js') }}"></script>{% endblock %}
     </body>
 </html>
+    {% endblock %}
+        
+    

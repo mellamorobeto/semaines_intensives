@@ -37,7 +37,7 @@ class WebsiteController extends Controller
             $em->persist($website);
             $em->flush();
 
-            return $this->redirectToRoute('website_index');
+            return $this->redirectToRoute('company_index');
         }
 
         return $this->render('website/new.html.twig', [

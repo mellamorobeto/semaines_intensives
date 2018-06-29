@@ -9,6 +9,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\MailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
@@ -22,8 +25,11 @@ class CompanyType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('name', TextType::class, array(
+                'label' => 'Nom et prénom ',
+            ))
             ->add('type',ChoiceType::class, array(
+                'label' => 'Type d\'entreprise ',
                 'choices'  => array(
                     'Grande entrepries(GE)' => 'GE',
                     'Taille intémédiaire(ETI)' =>'ETI',
@@ -35,6 +41,7 @@ class CompanyType extends AbstractType
                 ),
             ))
             ->add('industries',ChoiceType::class, array(
+                'label' => 'Choisissez votre industrie ',
                 'choices'  => array(
                     'Pétrolière' => 'Pétrolière',
                     'Sidérurgie' =>'Sidérurgie',
@@ -47,7 +54,9 @@ class CompanyType extends AbstractType
                     'class' => 'industries'
                 ),
             ))
-            ->add('nameCompany')
+            ->add('nameCompany', TextType::class, array(
+                'label' => 'Nom d\'entreprise ',
+            ))
             ->add('logo', FileType::class, array(
                 'label' => 'Votre Logo : ',
                 'data_class' => null, 
@@ -55,14 +64,20 @@ class CompanyType extends AbstractType
                     'name' => 'logo',
                 ),
                 ))
-            ->add('tel')
-            ->add('mail')
+            ->add('tel', IntegerType::class, array(
+                'label' => 'Téléphone ',
+            ))
+            ->add('mail', TextType::class, array(
+                'label' => 'E-mail ',
+            ))
             ->add('description', TextareaType::class,array(
                 'attr' => array(
                     'class' => 'desc'
                 ),
+                'label' => 'Activité de l\'entreprise',
             ))
             ->add('planete', ChoiceType::class, array(
+                'label' => 'Planète choisie ',
                 'choices'  => array(
                     'Nidavellir' => 'Nidavellir',
                     'Kamino' => 'Kamino' ,
@@ -76,6 +91,7 @@ class CompanyType extends AbstractType
                 ),
             ))
             ->add('products',ChoiceType::class, array(
+                'label' => 'Produit choisit ',
                 'multiple' => false,
                 'choices' => array(
                     'Nivadellir' => array(
@@ -112,6 +128,7 @@ class CompanyType extends AbstractType
             ))
                 
             ->add('materials', ChoiceType::class, array(
+                'label' => 'Matériaux choisit',
                 'multiple' => false ,
                 'choices' => array(
                     'Nivadellir' => array(
