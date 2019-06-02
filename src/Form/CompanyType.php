@@ -6,112 +6,169 @@ use App\Entity\Company;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\MailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-
+?>
+<div class="formcontainer">
+    <?php
 class CompanyType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('name', TextType::class, array(
+                'label' => 'Nom et prénom ',
+            ))
             ->add('type',ChoiceType::class, array(
+                'label' => 'Type d\'entreprise ',
                 'choices'  => array(
-                    'Grande entrepries(GE)' => true,
-                    'Taille intémédiaire(ETI)' => true,
-                    'Petite et Moyenne(PME)' => true,
-                    'Micro Entreprise(TPE)' => true,
+                    'Grande entrepries(GE)' => 'GE',
+                    'Taille intémédiaire(ETI)' =>'ETI',
+                    'Petite et Moyenne(PME)' => 'PME',
+                    'Micro Entreprise(TPE)' => 'TPE',
+                ),
+                'attr' => array(
+                    'class' => 'type'
                 ),
             ))
-            ->add('createdAt')
-            ->add('nameCompany')
-            ->add('logo', FileType::class, array('label' => 'inserer une image'))
-            ->add('tel')
-            ->add('mail')
-            ->add('description')
-            ->add('planete',ChoiceType::class, array(
+            ->add('industries',ChoiceType::class, array(
+                'label' => 'Choisissez votre industrie ',
                 'choices'  => array(
-                    'Nidavellir' => true,
-                    'Kamino' => true,
-                    'Alpha' => true,
-                    'Sakar' => true,
-                    'Xandar' => true,
-                    'Mustafar' => true,
+                    'Pétrolière' => 'Pétrolière',
+                    'Sidérurgie' =>'Sidérurgie',
+                    'Textile' => 'Textile',
+                    'Agro-Alimentaire' => 'Agro-Alimentaire',
+                    'Pharmaceutique' =>'Pharmaceutique',
+                    'Recyclage' => 'Recyclage',
+                ),
+                'attr' => array(
+                    'class' => 'industries'
+                ),
+            ))
+            ->add('nameCompany', TextType::class, array(
+                'label' => 'Nom d\'entreprise ',
+            ))
+            ->add('logo', FileType::class, array(
+                'label' => 'Votre Logo : ',
+                'data_class' => null, 
+                'attr' => array(
+                    'name' => 'logo',
+                ),
+                ))
+            ->add('tel', IntegerType::class, array(
+                'label' => 'Téléphone ',
+            ))
+            ->add('mail', TextType::class, array(
+                'label' => 'E-mail ',
+            ))
+            ->add('description', TextareaType::class,array(
+                'attr' => array(
+                    'class' => 'desc'
+                ),
+                'label' => 'Activité de l\'entreprise',
+            ))
+            ->add('planete', ChoiceType::class, array(
+                'label' => 'Planète choisie ',
+                'choices'  => array(
+                    'Nidavellir' => 'Nidavellir',
+                    'Kamino' => 'Kamino' ,
+                    'Alpha' => 'Alpha',
+                    'Sakar' => 'Sakar',
+                    'Xandar' => 'Xandar',
+                    'Mustafar' => 'Mustafar',
+                ),
+                'attr' => array(
+                    'class' => 'planete'
                 ),
             ))
             ->add('products',ChoiceType::class, array(
+                'label' => 'Produit choisit ',
+                'multiple' => false,
                 'choices' => array(
                     'Nivadellir' => array(
-                        'Produit 1' => 'stock_yes',
-                        'Produit 2' => 'stock_no',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Kamino' => array(
-                        'Produit 1' => 'stock_backordered',
-                        'Produit 2' => 'stock_discontinued',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Alpha' => array(
-                        'Produit 1' => 'stock_yes',
-                        'Produit 2' => 'stock_no',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Sakaar' => array(
-                        'Produit 1' => 'stock_backordered',
-                        'Produit 2' => 'stock_discontinued',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Xandar' => array(
-                        'Produit 1' => 'stock_yes',
-                        'Produit 2' => 'stock_no',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                     'Mustafar' => array(
-                        'Produit 1' => 'stock_backordered',
-                        'Produit 2' => 'stock_discontinued',
-                        'Produit 3' => 'stock_no',
+                        'Produit 1' => 'Produit 1',
+                        'Produit 2' => 'Produit 2',
+                        'Produit 3' => 'Produit 3',
                     ),
                 ),
             ))
-            ->add('materials',ChoiceType::class, array(
+                
+            ->add('materials', ChoiceType::class, array(
+                'label' => 'Matériaux choisit',
+                'multiple' => false ,
                 'choices' => array(
                     'Nivadellir' => array(
-                        'Matériaux 1' => 'stock_yes',
-                        'Matériaux 2' => 'stock_no',
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
                     ),
                     'Kamino' => array(
-                        'Matériaux 1' => 'stock_backordered',
-                        'Matériaux 2' => 'stock_discontinued',
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
                     ),
                     'Alpha' => array(
-                        'Matériaux 1' => 'stock_yes',
-                        'Matériaux 2' => 'stock_no',
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
                     ),
                     'Sakaar' => array(
-                        'Matériaux 1' => 'stock_backordered',
-                        'Matériaux 2' => 'stock_discontinued',
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
                     ),
                     'Xandar' => array(
-                        'Matériaux 1' => 'stock_yes',
-                        'Matériaux 2' => 'stock_no',
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
                     ),
                     'Mustafar' => array(
-                        'Matériaux 1' => 'stock_backordered',
-                        'Matériaux 2' => 'stock_discontinued',
+                        'Materiaux 1' => 'Materiaux 1',
+                        'Materiaux 2' => 'Materiaux 2',
                     ),
                 ),
             ))
         ;
     }
-
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults([
+        $resolver->setDefaults(array(
             'data_class' => Company::class,
-        ]);
+            'numOfHoles' => 0,
+        ));
     }
 
 
 }
+?>
+
+</div>

@@ -1,0 +1,120 @@
+
+{% extends 'base.html.twig' %}
+      {% block title %}OPU!{% endblock %}
+        {% block stylesheets %}
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/desktop.css') }}">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/mobile.css') }}">
+        <link rel="stylesheet" href="styles/font.css">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_mobile.css') }}">
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_desktop.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/flexboxgrid.min.css') }}" rel="stylesheet">
+        {% endblock %}
+  {% block body %}
+    <body>
+  <section id="nom" class="section">
+    <a href="#">O.P.U</a>
+    <h1>Organisation des Planètes Unies</h1>
+    <p>Protégeons notre planète pour les années futures en délocalisant
+    votre industrie.
+    </p>
+    <div class="nom_discover">
+      <h3>DÉCOUVRIR
+        <div>
+          <img src="{{ asset('bundles/easyadmin/img/arrow@2x.png') }}" alt="down_arrow">
+        </div>
+      </h3>
+    </div>
+  </section>
+
+  <section id="presentation" class="section">
+    <div class="section_illustration">
+      <img src="{{ asset('bundles/easyadmin/img/concept@2x.png') }}" alt="cycle lunaire terrestre" class="section_img">
+    </div>
+    <div class="presentation_txt">
+      <h2 class="section_h">Présentation</h2>
+      <div class="presentation_txt_highlight highlight"></div>
+      <p class="section_p">Depuis maintenant 10 ans les déchets de
+      l'industrie à grande échelle ont la possibilité
+      de ne plus affecter l'air que l'on respire et celle
+      que respireront nos enfants.<br>
+      En effet, l’Organisation des Planètes Unies,
+      met en place un service de délocalisations
+      industrielles à échelle planétaire.<br>
+      Il est désormais possible de délocaliser les
+      usines polluantes dans un monde ou sa
+      production serait en adéquation avec
+      l’atmosphère.La délocalisation de votre
+      entreprise permet d’assainir votre vie.</p>
+    </div>
+  </section>
+
+  <div class="presentation_feature"></div>
+  <div class="presentation_feature2"></div>
+
+
+  <section id="advantages" class="section">
+    <h2 class="section_h">Avantages</h2>
+    <div class="advantages_txt_highlight highlight"></div>
+    <p class="section_p">
+      Notre programme de délocalisation est très avantageux pour les industries car en effet celle-ci disposerons d’une subvention lors de leur délocalisation. <br>
+      En effet  celle-ci sera calculé en fonction du taux de pollution diminuant sur terre lors de la délocalisation de l’industrie en question.<br>
+      De plus déplacer leur entreprise leur permettra de disposer d’autre d’avantages non négligeable tel que la suppression de main d’oeuvre ou encore la proximité de matière première nouvelle et moins chère.
+    </p>
+  </section>
+
+  <div class="advantages_feature"></div>
+  <div class="advantages_feature2"></div>
+
+  <section id="ecology" class="section">
+    <div class="section_illustration">
+      <img src="{{ asset('bundles/easyadmin/img/environement@2x.png') }}" alt="touriste en moutagne" class="section_img">
+    </div>
+    <div class="ecology_presentation">
+      <h2 class="section_h">Ecologie</h2>
+      <div class="ecology_txt_highlight highlight"></div>
+      <p class="section_p">
+        L'écologie industrielle est l’ensemble des pratiques qui ont pour but la réduction de la pollution industrielle.
+        Elle intègre ces différents champs de connaissances par des méthodes d’ingénieur ou d’ingénierie écologique. C’est pour cela, que nous avons délocaliser les entreprises, par types, sur les planètes qui leurs correspondent.<br>
+        L’atmosphère de ses planètes supportent en tous points la pollution que généreront les usines présentent sur leurs sols.
+      </p>
+    </div>
+  </section>
+
+  <div class="ecology_feature"></div>
+  <div class="ecology_feature2"></div>
+
+  <section id="automation" class="section">
+    <h2 class="section_h">Robotisation</h2>
+    <div class="automation_txt_highlight highlight"></div>
+    <p class="section_p">
+      L’usine du futur, ou usine 4.0, dispose de nombreux avantages.<br>
+      Ces nouvelles planètes aux systèmes de traitement de commandes et d’analyse des niveaux de production permettent entre autres : une meilleure organisation de la production, une utilisation plus efficace des ressources, une diminution des rejets, une atmosphère purifiée de la planète bleue et la robotisation humanoïde.
+    </p>
+  </section>
+
+  <div class="automation_feature"></div>
+  <div class="automation_feature2"></div>
+
+  <section id="generation" class="section">
+    <div class="section_illustration">
+      <img src="{{ asset('bundles/easyadmin/img/generation_futur@2x.png') }}" alt="famille sur la plage" class="section_img">
+    </div>
+    <div class="generation_presentation">
+      <h2 class="section_h">Générations futures</h2>
+      <div class="generation_txt_highlight highlight"></div>
+      <p class="section_p">
+        Les dernières décennies sont témoins des conséquences plus ou moins immédiates sur une partie de la population mondiale. Ces conséquences sont, en partie, le résultat d’un mode de vie basé sur de mauvaises valeurs.<br>
+        Aujourd’hui, nous remédions à cela en purifiant l’atmosphère.
+      </p>
+    </div>
+  </section>
+
+  {{ include('footer.html.twig') }}
+    {% block javascripts %}<script src="{{ asset('bundles/easyadmin/javascript/script.js') }}"></script>{% endblock %}
+    </body>
+</html>
+    {% endblock %}
+        
+    

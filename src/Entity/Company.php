@@ -82,6 +82,11 @@ class Company
      */
     private $materials;
 
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $industries;
+
 
     public function __construct()
     {
@@ -244,10 +249,6 @@ class Company
         return $this;
     }
 
-    public function __toString() {
-        return $this->name;
-    }
-
     public function getMaterials(): ?string
     {
         return $this->materials;
@@ -258,5 +259,20 @@ class Company
         $this->materials = $materials;
 
         return $this;
+    }
+
+    public function getIndustries(): ?string
+    {
+        return $this->industries;
+    }
+
+    public function setIndustries(string $industries): self
+    {
+        $this->industries = $industries;
+
+        return $this;
+    }
+    public function __toString() {
+        return $this->name;
     }
 }

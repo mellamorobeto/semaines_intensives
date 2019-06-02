@@ -1,0 +1,47 @@
+
+        <title>{% block title %}OPU!{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/desktop.css') }}">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/mobile.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/easyadmin/stylesheet/font.css') }}">
+        <link rel="stylesheet" media="screen and (max-width: 639px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_mobile.css') }}">
+        <link rel="stylesheet" media="screen and (min-width: 640px)" href="{{ asset('bundles/easyadmin/stylesheet/presets_desktop.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/easyadmin/stylesheet/flexboxgrid.min.css') }}" rel="stylesheet">
+        {% endblock %}
+{% block body %}
+    <body>
+     <footer>
+    <div class="footer_container">
+
+      <div class="footer_linkContainer">
+        <a class="section_p" href="#">Conditions d'utilisation</a>
+        <a class="section_p" href="#">Confidentialité de l’information</a>
+        <a class="section_p" href="#">Contactez-nous</a>
+        <a class="section_p" href="#">Droits d’auteur</a>
+      </div>
+
+      <div class="footer_otherLinksContainer">
+        <div>
+          <img src="{{ asset('bundles/easyadmin/img/final%20logo@2x.png') }}" alt="OPU logo" class="footer_logo">
+        </div>
+        <a href="#" class="section_p">Organisation des Planètes Unies</a>
+      </div>
+    </div>
+
+      <div class="footer_link_networks">
+        <a href="#">
+          <img src="{{ asset('bundles/easyadmin/img/fb.png') }}" alt="page facebook">
+        </a>
+        <a href="#">
+          <img src="{{ asset('bundles/easyadmin/img/tw.png') }}" alt="compte twitter ">
+        </a>
+        <a href="#">
+          <img src="{{ asset('bundles/easyadmin/img/ln.png') }}" alt="compte LinkedIn">
+        </a>
+    </div>
+  </footer>
+    </div>
+    {% block javascripts %}<script src="{{ asset('bundles/easyadmin/javascript/script.js') }}"></script>{% endblock %}
+    {% endblock %}

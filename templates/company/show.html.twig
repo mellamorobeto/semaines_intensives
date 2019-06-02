@@ -3,74 +3,50 @@
 {% block title %}Company{% endblock %}
 
 {% block body %}
-    <h1>Company</h1>
+<article class="companySpace">
+  <section class="containerC">
+  <div class="company">
+    <img class="companyLogo" src="https://images.unsplash.com/photo-1529973162914-629bc610ef31?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4c779bcd2717ec25d3cd6d9776690f5e&auto=format&fit=crop&w=334&q=80" alt="">
+    <div class="companyHeader">
+    <p class="companyName">{{ company.nameCompany }}({{ company.name }})  -  &nbsp;</p>
+    <p class="companyType">{{ company.type }}</p>
+      </div>
+    <p class="companyType">{{ company.description }}</p>
+    <p></p>
+  </div>
+  
+   <div class="companySite">
+   <div>
+   <p class="companySite-title">Mes sites</p>
+   </div>
+    <div class="siteContainer">
+      <p>{{company.planete}}</p>
+      <p>{{ company.industries}}</p>
+      <p>En cours</p>
+      <p>{{ company.createdAt ? company.createdAt|date('Y-m-d') : '' }}</p>
+      <a href="{{ path('company_edit', {'id': company.id}) }}">Modifier</a>
+      </div>
+      {% for site in site %}
+      <div class="siteContainer">
+       <p>{{ site.name }}</p>
+      <p>{{ site.industrie }}</p>
+      <p>{{ site.createdAt ? site.createdAt|date('Y-m-d') : '' }}</p>
+      <p>{{ site.statut }}</p></br>
+      <a href="{{ path('website_index') }}">Voir mon site</a> </br>
+      </div>
+      {% endfor %}
+</div>
+</section>
+</article>   
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ company.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ company.name }}</td>
-            </tr>
-            <tr>
-                <th>Type</th>
-                <td>{{ company.type }}</td>
-            </tr>
-            <tr>
-                <th>CreatedAt</th>
-                <td>{{ company.createdAt ? company.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Company Name</th>
-                <td>{{ company.nameCompany }}</td>
-            </tr>
-            <tr>
-                <th>Logo</th>
-                <td>{{ company.logo }}</td>
-            </tr>
-            <tr>
-                <th>Tel</th>
-                <td>{{ company.tel }}</td>
-            </tr>
-            <tr>
-                <th>Mail</th>
-                <td>{{ company.mail }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ company.description }}</td>
-            </tr>
-            <tr>
-                <th>Planete</th>
-                <td>{{ company.planete }}</td>
-            </tr>
-            <tr>
-                <th>Products</th>
-                <td>{{ company.products }}</td>
-            </tr>
-            <tr>
-                <th>Site</th>
-                <td>
-                    {% for site in site %}
-                        {{ site.name }} {{ site.industrie }}<br>
-                    {% endfor %}
-                </td>
-            </tr>
+<div class="formContainer">
+   <a class="btn" href="{{ path('website_new') }}">Create new website</a>
+    
+    <a class="btn companyList" href="{{ path('company_index') }}">Voir la liste des entreprise</a>
 
+    <a class="btn companyEdit" href="{{ path('company_edit', {'id': company.id}) }}">Modifier</a>
+{{ include('company/_delete_form.html.twig') }}
+</div>
 
-
-
-        </tbody>
-    </table>
-
-    <a href="{{ path('company_index') }}">back to list</a>
-
-    <a href="{{ path('company_edit', {'id': company.id}) }}">edit</a>
-
-    <a href="{{ path('website_new') }}">Create new website</a>
-
-    {{ include('company/_delete_form.html.twig') }}
+    
 {% endblock %}
